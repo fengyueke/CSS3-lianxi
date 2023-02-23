@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		body {
+			perspective: 500px;
+		}
+
+		.box {
+			backface-visibility: hidden;
+			transition: all 1s;
+			position: relative;
+			box-sizing: border-box;
+			width: 400px;
+			height: 400px;
+			margin: 0 auto;
+			text-align: center;
+			transform-style: preserve-3d;
+		}
+
+		.font,
+		.back {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			line-height: 400px;
+			font-size: 30px;
+			color: #fff;
+		}
+
+		.font {
+			background: pink;
+			z-index: 1;
+		}
+
+		.back {
+			background: purple;
+			transform: rotateY(180deg);
+		}
+
+		.box:hover {
+			transform: rotateY(180deg);
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="font">黑马程序员</div>
+			<div class="back">在这里等你</div>
+		</div>
+	</body>
+</html>

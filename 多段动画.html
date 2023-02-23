@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		@keyframes move {
+			0%{
+				transform: translate(0,0);
+			}
+			25%{
+				transform: translate(800px,0);
+			}
+			50%{
+				transform: translate(800px,500px);
+			}
+			75%{
+				transform: translate(0px,500px);
+			}
+			100%{
+				transform: translate(0,0);
+			}
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			background: pink;
+			animation-name: move;
+			animation-duration: 5s;
+		}
+	</style>
+	<body>
+		<div></div>
+	</body>
+</html>

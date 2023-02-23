@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		body{
+			/* 增加透视效果 */
+			perspective: 500px;
+		}
+		.box{
+			/* 过渡样式和时间 */
+			transition: all 1s;
+			/* 建立3D通道 */
+			transform-style: preserve-3d;
+			position: relative;
+			margin: 100px auto;
+			width: 150px;
+			height: 40px;
+			text-align: center;
+		}
+		.box:hover{
+			/* 沿x轴旋转90deg */
+			transform: rotateX(90deg);
+		}
+		.font,.back{
+			position: absolute;
+			top: 0;
+			left: 0;
+			line-height: 40px;
+			font-size: 20px;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+		}
+		.font{
+			/* 沿z轴正方向移动20px */
+			transform: translateZ(20px);
+			background: pink;
+			z-index: 1;
+		}
+		.back{
+			position: absolute;
+			top: 20px;
+			background: purple;
+			transform: rotateX(-90deg);
+		}
+	</style>
+	<body>
+		<div class="box">
+			<div class="font">黑马程序员</div>
+			<div class="back">在这里等你</div>
+		</div>
+	</body>
+</html>

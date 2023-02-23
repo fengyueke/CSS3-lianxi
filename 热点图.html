@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		body{
+			background: #ddd;
+		}
+		.city{
+			position: absolute;
+			left: 200px;
+			top: 200px;
+		}
+		.yuan{
+			width: 8px;
+			height: 8px;
+			background: #09d;
+			border-radius: 50%;
+		}
+		.city div[class^=palse]{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			border-radius: 50%;
+			width: 8px;
+			height: 8px;
+			box-shadow: 0 0 12px #09d0fd;
+			animation: palse 1.2s infinite;
+		}
+		.city div.palse2{
+			animation-delay: 0.2s;
+		}
+		.city div.palse2{
+			animation-delay: 0.4s;
+		}
+		@keyframes palse {
+			0%{}
+			70%{
+				width: 40px;
+				height: 40px;
+				opacity: 1;
+			}
+			100%{
+				width: 70px;
+				height: 70px;
+				opacity: 0;
+			}
+		}
+	</style>
+	<body>
+		<div class="city">
+			<div class="yuan"></div>
+			<div class="palse1"></div>
+			<div class="palse2"></div>
+			<div class="palse3"></div>
+		</div>
+	</body>
+</html>
